@@ -10,18 +10,18 @@
 <body>
     <div class="navbar"> <!--- This divides our page into blocks/sections. its the most used tag when making websites. the class allows us to reference this block when designing its CSS.-->
         <div class="container1">
-            <a class = "logo" href="#">LionelvsLife<span class="logo-span">TV</span></a><!--Span is like div but for lines of text. We can design the word 'tv' in CSS.-->
+            <a class = "logo" href="Home.html">LionelvsLife<span class="logo-span">TV</span></a><!--Span is like div but for lines of text. We can design the word 'tv' in CSS.-->
 
             <img id = "mobile-cta" class = "mobile-menu" src = "images/menu.svg" alt="Open navigation"> <!--cta= 'call to action' id useful for referencing this tag when wanting to apply JS to it.-->
 
             <nav class = "navbar-contents"> <!--This is a tag that indicates a navigation bar/section. Use for making navigations.-->
                 <img id = "mobile-exit" class ="mobile-menu-exit" src ="images/exit.svg" alt="Close navigation"> 
                 <ul class = "Primary-nav"><!-- Unorder list-->
-                    <li class = "currentpage"><a href="#">Home</a></li> <!--list items-->
-                    <li><a href="#">Programming Projects</a></li> 
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Social Media</a></li>
-                    <li><a href="#">About me</a></li>
+                    <li class = "currentpage"><a href="Home.html">Home</a></li> <!--list items-->
+                    <li><a href="https://github.com/lionellegendz?tab=repositories">Project Portfolio</a></li> 
+                    <li><a href="Resources.html">Resources</a></li>
+                    <li><a href="https://linktr.ee/LionelvsLifeTV">Social Media</a></li>
+                    <li><a href="Lionel website Tech CV.pdf">About me</a></li>
                 </ul>
                 <ul class = "Secondary-nav"><!-- Unorder list-->
                     <li><a href="#">Shop</a></li>
@@ -38,7 +38,7 @@
                 <h1>Vlogs🎥, Stories 📖 & Knowledge 🧠</h1>
                 
                 <div class="hero-cta">
-                    <a href="https://www.youtube.com/watch?v=ktkHjL_PMc4" class="primary-cta" target="_blank">Check out latest video</a>
+                    <a href="https://www.youtube.com/watch?v=ktkHjL_PMc4&t=9s" class="primary-cta" target="_blank">Check out latest video</a>
                 </div>
             </div>
             
@@ -63,11 +63,12 @@
 
     <section class="testimonials">
         <div class="container">
-            <ul>
+            <ul id = "testimonials-ul">
                 <li class = "testimonial-list-items">
                     <img class = "test-img" src="images/Maa Netsu.jpg" alt="person 1">
                     <blockquote>
                         "You’re my source of motivation and I cannot thank you enough for your work. Thank you a thousand times 💙💙💙"
+                        
                         - Maa Netsu
                     </blockquote>
                 </li>
@@ -75,6 +76,7 @@
                     <img class="test-img" src="images/unheardmutejpg.jpg" alt="person 2">
                     <blockquote>
                         "This is so helpful! I like how there's a homework for you in the description😂"
+                        
                         - UnheardMute
                     </blockquote>
                 </li>
@@ -92,7 +94,7 @@
     </section>
 
     <section class="contact-section">
-        <div class="container">
+        <div class="container-con">
             <div class="contact-left">
                 <h2 >Contact</h2>
 

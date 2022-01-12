@@ -263,22 +263,66 @@ iframe{
     ul{
         display:flex;
     }
+
+    .Primary-nav{
+        margin: 0;
+    }
     a{
         font-size: 1em;
         padding:.1em 1em;
 
     }
 
-    .Primary-nav{
-        margin: 0;
-    }
+    
 
     li.current a{
         font-weight: bold;
     }
+    
+
+    .contact-section{
+        position: relative;
+    }
+    .container-con{
+        display: flex;
+    }
+    .contact-right{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width:45%;
+        height: 100%;
+
+    }
+
+    iframe{
+        height: 100%;
+    }
+    .features{
+        margin-top:0;
+    }
+
+    .features-list-items::before{
+        width: 30px;
+        height:30px;
+    }
+    
+    nav{
+        position:absolute; /* Keeps the nav contents fixed in place when scrollings */
+        
+    }
+
+    testimonials-ul{
+        display: flex;
+    }
+
+    .testimonial-list-items{
+        margin: 0 1em;
+    }
 
     
 }
+
 
 
 @media only screen and (min-width: 1080px){
@@ -296,19 +340,25 @@ iframe{
         display:flex;
         justify-content:space-between;
         text-align: left;
+        margin-left: 20px;
+        margin-right: 20px;
+    
 
+    }
+
+    .hero{
+        margin-top: 30px;
     }
 
     .left-column{
         margin: auto;
         padding: 2em;
+        width:20em;
     }
 
     .Lionel-img-1{
         width:75%;
-        margin-top: auto;
-        margin-bottom:auto;
-        margin-right: 8em;
+        margin: 20px 8em;
         border: 5px solid var(--third-colour);
         border-radius: .5em
         ;
@@ -318,4 +368,40 @@ iframe{
         display: block;
         font-size: 1.4em;
     }
+
+    .subhead{
+        text-align:center;
+
+    }
+
+    h1{
+        text-align: left;
+        display:block;
+        width:480px;
+        margin-right: 20px;
+    }
+    
+    .features{
+        margin-top:0;
+    }
+
+    .features-list-items::before{
+        width: 30px;
+        height:30px;
+    }
+    
+    nav{
+        position:absolute; /* Keeps the nav contents fixed in place when scrollings */
+        
+    }
+
+    testimonials-ul{
+        display: flex;
+    }
+
+    .testimonial-list-items{
+        margin: 0 1em;
+    }
+    
+    
 }

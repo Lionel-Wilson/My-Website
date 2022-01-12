@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Resources.css">
+    <title>Resources</title>
+</head>
+<body>
+    <div class="navbar"> <!--- This divides our page into blocks/sections. its the most used tag when making websites. the class allows us to reference this block when designing its CSS.-->
+        <div class="container1">
+            <a class = "logo" href="Home.html">LionelvsLife<span class="logo-span">TV</span></a><!--Span is like div but for lines of text. We can design the word 'tv' in CSS.-->
+
+            <img id = "mobile-cta" class = "mobile-menu" src = "images/menu.svg" alt="Open navigation"> <!--cta= 'call to action' id useful for referencing this tag when wanting to apply JS to it.-->
+
+            <nav class = "navbar-contents"> <!--This is a tag that indicates a navigation bar/section. Use for making navigations.-->
+                <img id = "mobile-exit" class ="mobile-menu-exit" src ="images/exit.svg" alt="Close navigation"> 
+                <ul class = "Primary-nav"><!-- Unorder list-->
+                    <li class = "currentpage"><a href="Home.html">Home</a></li> <!--list items-->
+                    <li><a href="https://github.com/lionellegendz?tab=repositories">Project Portfolio</a></li> 
+                    <li><a href="Resources.html">Resources</a></li>
+                    <li><a href="https://linktr.ee/LionelvsLifeTV">Social Media</a></li>
+                    <li><a href="Lionel website Tech CV.pdf">About me</a></li>
+                </ul>
+                <ul class = "Secondary-nav"><!-- Unorder list-->
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div> 
+
+
+    <section class = "Resource-pg-explanation">
+        <div class = "container2">
+            <h1>Resources</h1>
+            <p id = "resource-exp"> Welcome to the 'Resources' Page. Here you can find all the resources that I've used or am currently using in order to
+                learn the things I'm interested in. Whether that's learning Japanese, how to program/code or how to do a handstand push up. You can find it all here.
+            </p>
+        </div>
+
+        <div class = "container3">
+            <h2 class = "resource-title">Japanese</h2>
+            <Ul class = "resource-list">
+                <li> <a class = "resource-li-link" href="https://youtube.com/playlist?list=PLUbfLttzrf0B2cMVwKzWIoG34rCvg91Nj">My Japanese Language Playlist</a> - An AMAZING, well-structured, detailed playlist that teaches you how to study Japanese to fluency, by yourself, for FREE. Show's you how to use all the resources below.</li>
+                <li> <a class = "resource-li-link" href = "https://apps.ankiweb.net/">Anki</a> - A Spaced Repetition Software(SRS) that I use to memorise almost everything</li>
+                <li> <a class = "resource-li-link" href="http://www.alljapaneseallthetime.com/blog/all-japanese-all-the-time-ajatt-how-to-learn-japanese-on-your-own-having-fun-and-to-fluency/">All Japanese All The Time(AJATT)</a> - Foundational theory and method for Learning Japanese</li>
+                <li> <a class = "resource-li-link" href="https://refold.la/">Refold</a> - Foundational theory and method to learn any Language</li>
+                <li> <a class = "resource-li-link" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiMsvnv16z1AhWjgv0HHRYBBqoQjBB6BAgIEAE&url=https%3A%2F%2Fwww.netflix.com%2Fgb%2Flogin&usg=AOvVaw3Ph6em1ZwmEElr06EFyd2a">Netflix</a> - A Spaced Repetition Software(SRS) that I use to memorise almost everything</li>
+                <li> <a class = "resource-li-link" href="https://animelon.com/">Animelon</a> - A website to watch anime for free. Allow's you to watch anime with Japanese or English subtitles to aid in your studies.</li>
+                <li> <a class = "resource-li-link" href="https://jisho.org/">Jisho</a> - A Japanese-English Dictionary</li>
+                <li> <a class = "resource-li-link" href="https://www.deepl.com/ja/translator">DeepL</a> - An amazing language translator. (Better than google translate in my humble opinion)</li>
+                <li> <a class = "resource-li-link" href="https://ganma.jp/">Ganma</a> - A website where you can read Japanese Manga(IN JAPANESE) for free!</li>
+                
+            </Ul>
+            <h2 class = "resource-title">Programming</h2>
+            <Ul class = "resource-list">
+                <li> <a class = "resource-li-link" href="https://www.w3schools.com/">W3schools</a> - A website where you can learn various programming language for free</li>
+                <li> <a class = "resource-li-link" href="https://stackoverflow.com/">Stackoverflow</a> - A website where you can get help if you're ever stuck with anything coding related.</li>
+
+
+            </Ul>
+            <h2 class = "resource-title">Fitness</h2>
+
+            <Ul class = "resource-list">
+                <li> When I get back on my fitness grind, I'll update this...</li>
+            </Ul>
+
+
+        </div>
+
+    </section>
+
+    <script>
+        // const creates a cosntan variable. meaning it cannot be reassigned/changed later.//
+        //Note if you don't you use semi-colon at the end of the line below, and then move on to the next line and tab twice, the next variable will also be a const.//
+        const mobile_button = document.getElementById('mobile-cta')
+              nav = document.querySelector('nav') //query selector allows to select anything. a tag or id  or class whatever.//
+              mobile_exit_button = document.getElementById('mobile-exit')
+
+        //addeventlistener adds an event handler. Parameters are (event, function, useCapture).event in this case is 'user clicking' aka 'click'.//
+        //here we didn't put a function though. were defining the function in the parameter. by using 'js arrow function'. This only works if funciton has 1 statement.//
+        mobile_button.addEventListener('click',() =>{
+            nav.classList.add('mobile-menu'); //adds the mobile menu class to the nav class list. i.e displays it//
+        })
+
+        mobile_exit_button.addEventListener('click',() =>{
+            nav.classList.remove('mobile-menu'); 
+        })
+
+    </script>
+</body>
+</html>

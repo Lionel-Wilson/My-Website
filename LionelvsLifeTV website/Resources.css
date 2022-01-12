@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,700&display=swap');
+
+:root{
+    --primary-colour: #ADB5BD;
+    --secondary-color:#343A40 ; /*Allows us to create variables that we can use throughout the css*/
+    --third-colour: #212529;
+    --fourth-colour: #F8F9FA;
+}
+
+body {
+    background-color: var(--fourth-colour);
+    margin: 0; 
+    font-family:'Poppins';
+}
+
+.navbar {
+    background-color: var(--third-colour);
+    padding:1em;
+
+}
+
+.logo{
+    text-decoration: none;/*removes underlineing and color from the word if it is a link*/
+    font-weight: bold;
+    color: var(secondary-color);
+    font-size: 1.2em;
+}
+.logo-span{
+    color: var(--fourth-colour);
+}
+
+.navbar-contents{
+    display: none; /* Hides the class*/
+}
+
+
+nav{
+    position:fixed; /* Keeps the nav contents fixed in place when scrollings */
+    z-index: 999; /*This is like deciding the layer in photoshop. high the number the more elements it gets displayed on top of. Only works on positioned elements.*/
+    right: 0; /* this decides where the element will be displayed horizonatally using the right edge of the element for positionining.*/
+    top: 0;
+    background-color: var(--third-colour);
+    height: 100vh; /*decides the height of the element. vh is a relative unit. 100 makes its height 100% equal to the heigh of the viewport.*/
+    padding: 1em;
+
+}
+
+.Primary-nav{
+    margin-top: 5em;
+}
+
+
+.container1 {
+    display:flex; /* Just know for now that this allows us to make the container items be arrange horizonatally rather than vertically.*/
+    place-content: space-between; /*this allows us to decide how we want the elements in the container to be laid out. spacebetween means we want there to be space between each element.*/
+}
+
+.mobile-menu{
+    display: block;
+    cursor: pointer;/*changes the cursor when hoverig over the burger menu*/
+
+}
+
+
+a{
+    color: var(--fourth-colour);
+    text-decoration: none;
+}
+
+a:hover{
+    font-weight: bold;
+}
+
+
+.mobile-menu-exit{
+    float: right; /*float removes the element from the document flow and allows you to reposition it. make it litterally 'float above' other elements.*/
+    margin: .5em;
+    cursor:pointer;
+
+
+}
+
+ul{
+    list-style-type: none;/*removed the default bullet points*/
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+section{
+    padding: 5em 2em;
+}
+
+
+h1{
+    font-size:2.5em;
+    line-height:1.3em; /*space between lines of text*/
+    margin-top:0;
+    color: var(--third-colour);
+}
+
+p{
+    color: var(--third-colour);
+    width: 100%;
+}
+
+.resource-li-link{
+    color: var(--third-colour);
+    padding:0;
+}
+
+
+.Resource-pg-explanation{
+    padding-top: 2em;
+    padding-bottom: 5em;
+}
+
+
+
+@media only screen and (min-width: 768px){
+    .mobile-menu,.mobile-menu-exit{
+        display: none;
+    }
+
+    .container1{
+        display:grid;
+        grid-template-columns:180px auto; /*defines column sizes. starting from far left. size of the rest are auto set*/
+
+    }
+
+    a{
+        font-size: 1em;
+        padding:.1em 1em;
+
+    }
+
+    .Primary-nav{
+        margin: 0;
+    }
+
+    li.current a{
+        font-weight: bold;
+    }
+
+    nav{
+        position:absolute; /* Keeps the nav contents fixed in place when scrollings */
+        
+    }
+    .resource-li-link{
+        color: var(--third-colour);
+    }
+}
+
+
+
+@media only screen and (min-width: 1080px){
+    .container2{
+        width: 1080px;
+        margin: 0 0;
+
+    }
+    section{
+        padding:10em 4em;
+
+    }
+    
+    
+    nav{
+        position:absolute; /* Keeps the nav contents fixed in place when scrollings */
+        
+    }
+
+    h1{
+        font-size:2.5em;
+        line-height:1.3em; /*space between lines of text*/
+        color: var(--third-colour);
+        text-align: left;
+        width:auto;
+        margin:0 auto auto 0;
+    }
+
+    .resource-li-link{
+        color: var(--third-colour);
+    }
+    
+    .container1{
+        display:grid;
+        grid-template-columns:180px auto; /*defines column sizes. starting from far left. size of the rest are auto set*/
+
+    }
+
+    .navbar-contents{
+        display:flex;
+        justify-content:space-between;
+        background:none;
+        height: auto;
+        width: 87%;
+        padding:0;
+        margin-top: 1em;
+
+    }
+
+
+    .Primary-nav{
+        margin: 0;
+        display:flex;
+    }
+
+    .Secondary-nav{
+        margin: 0;
+        display:flex;
+        
+    }
+}
