@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- All this was made using '!Emmet abbreviation'. This is what standard websites have-->
+<head>
+    <meta charset="UTF-8"> <!--This allows the browser to display the web page properly. it sets what character set standard should be used when encoding.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LionelvsLifeTV Home</title><!-- Used for search engine optimsation-->
+    <link rel="stylesheet" href="Main.css"><!-- Links this document to an external css stylesheet-->
+</head>
+<body>
+    <div class="navbar"> <!--- This divides our page into blocks/sections. its the most used tag when making websites. the class allows us to reference this block when designing its CSS.-->
+        <div class="container1">
+            <a class = "logo" href="#">LionelvsLife<span class="logo-span">TV</span></a><!--Span is like div but for lines of text. We can design the word 'tv' in CSS.-->
+
+            <img id = "mobile-cta" class = "mobile-menu" src = "images/menu.svg" alt="Open navigation"> <!--cta= 'call to action' id useful for referencing this tag when wanting to apply JS to it.-->
+
+            <nav class = "navbar-contents"> <!--This is a tag that indicates a navigation bar/section. Use for making navigations.-->
+                <img id = "mobile-exit" class ="mobile-menu-exit" src ="images/exit.svg" alt="Close navigation"> 
+                <ul class = "Primary-nav"><!-- Unorder list-->
+                    <li class = "currentpage"><a href="#">Home</a></li> <!--list items-->
+                    <li><a href="#">Programming Projects</a></li> 
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Social Media</a></li>
+                    <li><a href="#">About me</a></li>
+                </ul>
+                <ul class = "Secondary-nav"><!-- Unorder list-->
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div> 
+
+    <section class="hero">
+        <div class="container2">
+            <div class = "left-column">
+                <p class = "subhead">Your favourite Sensei</p>
+                <h1>Vlogs🎥, Stories 📖 & Knowledge 🧠</h1>
+                
+                <div class="hero-cta">
+                    <a href="https://www.youtube.com/watch?v=ktkHjL_PMc4" class="primary-cta" target="_blank">Check out latest video</a>
+                </div>
+            </div>
+            
+
+            <img class = "Lionel-img-1" src = "images/lionel 3.jpeg" alt = "Picture of me">
+
+            
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <ul class = "features-list">
+                <li class = "features-list-items">My Projects</li>
+                <li class = "features-list-items">Resources</li>
+                <li class = "features-list-items">My Social Media</li>
+                <li class = "features-list-items">About me</li>
+            </ul>
+        </div>
+        <img class = "lionel-img-2" src="Lionel-img-2" alt="Picture of me again">
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <ul>
+                <li class = "testimonial-list-items">
+                    <img class = "test-img" src="images/Maa Netsu.jpg" alt="person 1">
+                    <blockquote>
+                        "You’re my source of motivation and I cannot thank you enough for your work. Thank you a thousand times 💙💙💙"
+                        - Maa Netsu
+                    </blockquote>
+                </li>
+                <li class = "testimonial-list-items">
+                    <img class="test-img" src="images/unheardmutejpg.jpg" alt="person 2">
+                    <blockquote>
+                        "This is so helpful! I like how there's a homework for you in the description😂"
+                        - UnheardMute
+                    </blockquote>
+                </li>
+                <li class = "testimonial-list-items">
+                    <img class="test-img" src="images/normiel.jpg" alt="person 3">
+                    <blockquote>
+                        "Thank you. This video was soooo informative!!! Down to the copy and paste to get rid of the color lol! And it was nice seeing your journey through your flash cards that your cards got increasingly less basic! 
+                        Thanks for taking the time again to show us a really good way of learning Japanese! ほんとに役に立つ!"
+                        
+                        - Normie L
+                    </blockquote>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-left">
+                <h2 >Contact</h2>
+
+                <form action="">
+                    <label for="name">Name</label><!--'for' attribute binds the label to the correspnding input tag. so you have to make the input tag id the same as the for attribute of the label. otherwise it wont let you input on website-->
+                    <input type="text" id="name" name="name">
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email">
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+                    <input type="submit" class="send-message-cta" value="Send message">
+                </form>
+            </div>
+            <div class="contact-right"> <!---IFRAME allwos you to embed another website into the current website.-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2403.8020322395564!2d-1.1884544842080988!3d52.95198507989828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c21d345bd36d%3A0xc9d361c32a4de5df!2sUniversity%20of%20Nottingham%2C%20Jubilee%20Campus!5e0!3m2!1sen!2suk!4v1641196043867!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // const creates a cosntan variable. meaning it cannot be reassigned/changed later.//
+        //Note if you don't you use semi-colon at the end of the line below, and then move on to the next line and tab twice, the next variable will also be a const.//
+        const mobile_button = document.getElementById('mobile-cta')
+              nav = document.querySelector('nav') //query selector allows to select anything. a tag or id  or class whatever.//
+              mobile_exit_button = document.getElementById('mobile-exit')
+
+        //addeventlistener adds an event handler. Parameters are (event, function, useCapture).event in this case is 'user clicking' aka 'click'.//
+        //here we didn't put a function though. were defining the function in the parameter. by using 'js arrow function'. This only works if funciton has 1 statement.//
+        mobile_button.addEventListener('click',() =>{
+            nav.classList.add('mobile-menu'); //adds the mobile menu class to the nav class list. i.e displays it//
+        })
+
+        mobile_exit_button.addEventListener('click',() =>{
+            nav.classList.remove('mobile-menu'); 
+        })
+
+    </script>
+</body>
+</html>

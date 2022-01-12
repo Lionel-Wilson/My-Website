@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,700&display=swap');
+
+:root{
+    --primary-colour: #ADB5BD;
+    --secondary-color:#343A40 ; /*Allows us to create variables that we can use throughout the css*/
+    --third-colour: #212529;
+    --fourth-colour: #F8F9FA;
+}
+/*body is what they call a selector. allows us to refer to a certain tag in the html*/
+body {
+    background-color: var(--fourth-colour);
+    margin: 0; /*Sets the text to be right up against the left of the web page*/
+    font-family:'Poppins';
+}
+
+/* The full stop means 'class'*/
+/*padding affect the indentation of writing inside an element.It creates space around the element contents.*/
+/*While margin makes white space arouund elements*/
+.navbar {
+    background-color: var(--third-colour);
+    padding:1em;
+
+}
+
+
+.logo{
+    text-decoration: none;/*removes underlineing and color from the word if it is a link*/
+    font-weight: bold;
+    color: var(secondary-color);
+    font-size: 1.2em;
+}
+.logo-span{
+    color: var(--fourth-colour);
+}
+
+.navbar-contents{
+    display: none; /* Hides the class*/
+}
+
+
+
+nav{
+    position:fixed; /* Keeps the nav contents fixed in place when scrollings */
+    z-index: 999; /*This is like deciding the layer in photoshop. high the number the more elements it gets displayed on top of. Only works on positioned elements.*/
+    right: 0; /* this decides where the element will be displayed horizonatally using the right edge of the element for positionining.*/
+    top: 0;
+    background-color: var(--third-colour);
+    height: 100vh; /*decides the height of the element. vh is a relative unit. 100 makes its height 100% equal to the heigh of the viewport.*/
+    padding: 1em;
+
+}
+
+.Primary-nav{
+    margin-top: 5em;
+}
+
+
+.container1 {
+    display:flex; /* Just know for now that this allows us to make the container items be arrange horizonatally rather than vertically.*/
+    place-content: space-between; /*this allows us to decide how we want the elements in the container to be laid out. spacebetween means we want there to be space between each element.*/
+}
+
+.mobile-menu{
+    display: block;
+    cursor: pointer;/*changes the cursor when hoverig over the burger menu*/
+
+}
+
+/*notice how we didnt used a fullstop here. here we are referencing all the 'a'(link) tags and changing their color.*/
+a{
+    color: var(--fourth-colour);
+    text-decoration: none;
+    display: block; /* need see display to block if you want to be able to add padding*/
+    padding: .5em;
+    font-size: 1.3em;
+    text-align: right;
+}
+
+a:hover{
+    font-weight: bold;
+}
+
+.mobile-menu-exit{
+    float: right; /*float removes the element from the document flow and allows you to reposition it. make it litterally 'float above' other elements.*/
+    margin: .5em;
+    cursor:pointer;
+
+
+}
+
+ul{
+    list-style-type: none;/*removed the default bullet points*/
+    margin: 0;
+    padding: 0;
+    
+}
+
+section{
+    padding: 5em 2em;
+}
+
+.hero{
+    text-align: center;
+    padding: 0;
+}
+
+
+.subhead{
+    text-transform: uppercase;
+    font-weight: bold;
+    color:var(--third-colour);
+    letter-spacing:.3em;
+}
+
+
+h1{
+    font-size:2.5em;
+    line-height:1.3em; /*space between lines of text*/
+    margin-top: .2em;/*help us reduce the gap between 'your favourite sensei' and 'vlogs...'etc*/
+    color: var(--third-colour);
+}
+
+.primary-cta{
+    background-color: var(--third-colour);
+    text-decoration: none;
+    padding: .6em 1.3em; /* remeber if we put two values it means, top and bottom and left and right.*/
+    font-size: 1.4em;
+    border-radius: .5em; /*makes the border rounder the higher the value.*/
+    font-weight: bold;
+    display: inline-block;
+}
+
+
+.Lionel-img-1{
+    margin-top: 3em;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+/* below is the same as what weve been doing up until now. its just allows us to see what tag this class is coming from*/
+section.features{
+    background-color:var(--third-colour);
+    color: var(--fourth-colour);
+    margin-top:3em;
+}
+
+.features-list{
+    padding-left:.1em;
+    margin:0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(19rem,1fr));
+    
+}
+
+.features-list-items{
+    font-size:1.1em;
+    margin-left: 2em;
+    margin-bottom:1em; /*sapce out individual list items abit more.*/
+    position: relative;
+}
+
+/*before allows use to insert content before the selected element. in this case the list items. we've put an empty string before the element and put an image*/
+.features-list-items:before{
+    content:'';
+    position: absolute; 
+    left: -2em;
+    width:20px;
+    height:20px;
+    background-image: url('images/bullet.svg');
+    background-size:contain;
+    margin-right:.5em;
+
+}
+
+.lionel-img-2{
+    display:none;
+}
+
+
+.testimonials{
+    background-color: var(--third-colour);
+    margin-top: 3em;
+    color: var(--fourth-colour)
+}
+
+.test-img{
+    width: 5em;
+    height:5em;
+    border: 5px solid var(--fourth-colour); /*'solid' property creates a solid line. other similiar poperties include 'dashed' and 'dotted'*/
+    border-radius: 50%;
+    margin-top: -4.5em;
+}
+
+
+.testimonial-list-items{
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 2em 1em;
+    width:80%; /*This means the list items are 80% in size relative to the parent object. in this case the <ul> tag.*/
+    margin:0 auto 5em auto;
+    border-radius: 1em;
+
+}
+
+
+label{
+    display: block; /*display decideds how the element will be displayed on the screen. mroe specifically in its area. Block means that it will be displayed like its its own block of writing e.g. like a paragraph. and will therefore take up the whole width of the line it's on, and anything else that would normally be beside it, would have to be pushed below it. to the next line.*/
+    margin-bottom: .5em;
+    font-size: 1.2em;
+}
+
+input, textarea{
+    margin-bottom: 1em;
+    display: block;
+    border-radius: .3em;
+    padding:.8em;
+    border: 2px solid var(--third-colour);
+    width:100%;
+    box-sizing: border-box; /*boxsizing allows us to choose how we want the width & height of the element to be calculated. whether it is to include borders and padding or just the contents. border box includes the content,borders and padding.*/
+
+}
+
+.send-message-cta{
+    background-color: var(--third-colour);
+    color: var(--fourth-colour);
+    width:50%;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+iframe{
+    width:100%;
+    height:300px;
+}
+
+/*Media query*/
+
+@media only screen and (min-width: 768px){
+    .mobile-menu,.mobile-menu-exit{
+        display: none;
+    }
+
+    .container1{
+        display:grid;
+        grid-template-columns:180px auto; /*defines column sizes. starting from far left. size of the rest are auto set*/
+
+    }
+
+    .navbar-contents{
+        display:flex;
+        justify-content:space-between;
+        background:none;
+        height: auto;
+        width: 87%;
+        padding:0;
+        margin-top: 1em;
+
+    }
+
+    ul{
+        display:flex;
+    }
+    a{
+        font-size: 1em;
+        padding:.1em 1em;
+
+    }
+
+    .Primary-nav{
+        margin: 0;
+    }
+
+    li.current a{
+        font-weight: bold;
+    }
+
+    
+}
+
+
+@media only screen and (min-width: 1080px){
+    .container2{
+        width: 1080px;
+        margin: 0 auto;
+
+    }
+    section{
+        padding:10em 4em;
+
+    }
+
+    .hero .container2{
+        display:flex;
+        justify-content:space-between;
+        text-align: left;
+
+    }
+
+    .left-column{
+        margin: auto;
+        padding: 2em;
+    }
+
+    .Lionel-img-1{
+        width:75%;
+        margin-top: auto;
+        margin-bottom:auto;
+        margin-right: 8em;
+        border: 5px solid var(--third-colour);
+        border-radius: .5em
+        ;
+    }
+
+    .features-list{
+        display: block;
+        font-size: 1.4em;
+    }
+}
